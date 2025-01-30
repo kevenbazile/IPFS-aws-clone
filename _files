@@ -1,0 +1,11 @@
+                                        Table "public.ipfs_files"
+  Column   |            Type             | Collation | Nullable |                Default                 
+-----------+-----------------------------+-----------+----------+----------------------------------------
+ id        | integer                     |           | not null | nextval('ipfs_files_id_seq'::regclass)
+ cid       | text                        |           | not null | 
+ filename  | text                        |           |          | 
+ timestamp | timestamp without time zone |           |          | CURRENT_TIMESTAMP
+Indexes:
+    "ipfs_files_pkey" PRIMARY KEY, btree (id)
+    "ipfs_files_cid_key" UNIQUE CONSTRAINT, btree (cid)
+
